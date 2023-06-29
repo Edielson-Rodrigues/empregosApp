@@ -1,0 +1,216 @@
+body{
+	background: linear-gradient(90deg, #ffffff 40%, #888888);
+	font-family: 'Montserrat', sans-serif; /*Fonte principal e fonte alternativa*/
+}
+
+header{
+	background-color: #BBBBBB;
+	padding: 30px 0px;
+}
+
+.caixa{
+	position: relative;
+	width: 70%;
+	margin: 0px auto;
+}
+
+nav{
+	position: absolute;
+	top: 110px;
+	right: 0px;
+}
+
+nav li{
+	display: inline;
+	margin-left: 15px;
+	
+}
+
+nav a{
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover{
+	color: rgb(99, 192, 161);
+	text-decoration: underline;
+}
+
+main{
+	margin: 0px 10%;
+}
+
+p::first-line{ /*Pegando a primeira linha de cada parágrafo*/
+	font-style: italic;
+}
+
+.banner{
+	width: 100%;
+}
+
+.titulo-principal{
+	text-align: center;
+	font-size: 2em; /*Duas vezes maior que a font padrão*/
+	margin: 1em 0px; /*Uma margin com o tamanho de 1 vez o tamanho da fonte*/
+	clear: left; /*Limpando o float para que ele não interfira nesse elemento*/
+	color: rgba(0, 0, 0, 0.8); /*o ultímo parâmetro é a opacidade */
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-principal::first-letter{ /*Pegando a primeira letra*/
+	font-weight: bold;
+}
+
+.titulo-principal::before{
+	content: "[ ";
+}
+
+.titulo-principal::after{
+	content: " ]";
+}
+
+.utensilios{
+	width: 120px;
+	float: left; /*Colocando texto no lado e a imagem no lado esquerdo*/
+	margin: 0px 20px 20px 0px;
+}
+
+.principal{
+	padding: 1em 0;
+}
+
+/*Seletores avançados*/
+/* 
+main > p{ Pega os elementos p que são filhos diretos da main
+	background-color: red;
+}
+
+img + p::first-line{  Pega a primeira linha do primeiro parágrafo que vem após uma imagem
+	background-color: blue;
+}
+
+img ~ p { Pega todos os parágrafos que vem após a imagem
+	background-color: yellow;
+}
+
+.principal p:not(#missao){ Pega todos os parágrafos da class principal que não tem id missão
+	background-color: orange;
+}
+*/
+
+.principal p{
+	margin-bottom: 1em;
+
+}
+
+.principal Strong{
+	font-weight: bold;
+}
+
+.principal em{
+	font-style: italic;
+}
+
+.mapa{
+	padding: 3em 0px;
+}
+
+.mapa p{
+	text-align: center;
+	margin: 3em 0px;
+}
+
+.conteudo-beneficios{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.itens{
+	line-height: 1.5; /*Altura da linha, diferente do padding não altera tamanho que os elementos ocupa e nem cria espaços
+	vazios como o margin*/
+}
+
+.itens::before{
+	content: "\1F31F  ";
+}
+/*Pega o terceiro, primeiro e último elemento*/
+/* .itens:nth-child(3), .itens:first-child, .itens:last-child{
+	font-weight: bold;
+} */
+
+.itens:nth-child(2n){ /*Pega todos os elementos de números pares*/
+	font-weight: bold;
+}
+
+.lista-beneficios{
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+}
+
+.imagem-beneficios{
+	width: 60%;
+	opacity: 1; /*vai de 0 a 1*/
+	box-shadow: 10px 10px 30px 20px #000000, -10px -10px #ffff00, -25px 25px rgba(255, 0, 0, 0.5); /*X, Y, desfoque, itensidade, cor*/
+	transition: all 1s;
+
+}
+
+.imagem-beneficios:hover{
+	opacity: 0.3;
+	
+}
+
+.video{
+	text-align: center;
+	margin: 4em auto;
+
+}
+
+.video-item{
+	width: 560px;
+	height: 315px;
+}
+
+footer{
+	background: url(../imagens/bg.jpg);
+	margin-top: 30px;
+	padding: 30px 0px;
+	text-align: center;
+}
+
+.copyright{
+	color: #ffffff;
+	margin: 20px;
+	font-size: 13px;
+}
+
+@media screen and (max-width: 480px){
+	.caixa, .principal{
+		width: auto;
+	}
+	
+	.video-item{
+		width: 100%;
+	}
+
+	h1{
+		text-align: center;
+	}
+
+	nav{
+		position: static;
+		text-align: center;
+	}
+
+	.lista-beneficios{
+		width: 100%;
+	}
+
+	.imagem-beneficios{
+		width: 100%;
+	}
+}

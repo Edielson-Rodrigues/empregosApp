@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+    xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/resetStyle.css">
+    <link rel="stylesheet" href="style/indexStyle.css">
+    <title>empregosApp - Login</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <a href="/">Login</a>
+            <a href="/cadastrarCandidato">Candidato?</a>
+        </div>
+    </header>
+    
+    <section class="main">
+        <img class="logo" src="images/Empregos App - logo.png">
+        <form action="/salvarPrestador" method="post">
+            
+            <input type="text" name="nome" placeholder="Seu nome">
+
+            <input type="email" name="email" placeholder="seuemail@exemplo.com">
+
+            <input type="password" name="senha">
+
+            <input type="text" name="cnpj" placeholder="XX. XXX. XXX/0001-XX">
+    
+            <input type="text" name="razaoSocial" placeholder="Razão Social">
+
+            
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer></footer>
+</body>
+</html>
